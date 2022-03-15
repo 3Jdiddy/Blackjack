@@ -55,13 +55,13 @@ btnClose.addEventListener('click', function () {
   playerHitCount = 0;
   score0.textContent = playerScore;
   score1.textContent = houseScore;
-  centerCard.src = `/starter/backOfCard.png`;
+  centerCard.src = `backOfCard.png`;
 
-  card0.src = `/starter/backOfCard.png`;
+  card0.src = `backOfCard.png`;
   card1.classList.add('hidden');
   card2.classList.add('hidden');
   card3.classList.add('hidden');
-  card4.src = `/starter/backOfCard.png`;
+  card4.src = `backOfCard.png`;
   card5.classList.add('hidden');
   card6.classList.add('hidden');
   card7.classList.add('hidden');
@@ -86,13 +86,13 @@ btnCloseDefeat.addEventListener('click', function () {
   playerHitCount = 0;
   score0.textContent = playerScore;
   score1.textContent = houseScore;
-  centerCard.src = `/starter/backOfCard.png`;
+  centerCard.src = `backOfCard.png`;
 
-  card0.src = `/starter/backOfCard.png`;
+  card0.src = `backOfCard.png`;
   card1.classList.add('hidden')
   card2.classList.add('hidden');
   card3.classList.add('hidden');
-  card4.src = `/starter/backOfCard.png`;
+  card4.src = `backOfCard.png`;
   card5.classList.add('hidden')
   card6.classList.add('hidden');
   card7.classList.add('hidden');
@@ -115,7 +115,7 @@ btnNew.addEventListener('click', function () {
   playerScore = 0;
   houseScore = 0;
   playerHitCount = 0;
-  centerCard.src = `/starter/backOfCard.png`;
+  centerCard.src = `backOfCard.png`;
   card2.classList.add('hidden');
   card3.classList.add('hidden');
   card6.classList.add('hidden');
@@ -138,12 +138,12 @@ btnNew.addEventListener('click', function () {
   card1.classList.remove('hidden');
   card5.classList.remove('hidden');
 
-  card0.src = `/starter/PNG-cards-1.3/${cardNumberDealPlayer0}_of_${cardSuitDealPlayer0}.png`;
+  card0.src = `${cardNumberDealPlayer0}_of_${cardSuitDealPlayer0}.png`;
 
-  card1.src = `/starter/PNG-cards-1.3/${cardNumberDealPlayer1}_of_${cardSuitDealPlayer1}.png`;
+  card1.src = `${cardNumberDealPlayer1}_of_${cardSuitDealPlayer1}.png`;
 
-  card4.src = `/starter/backOfCard.png`;
-  card5.src = `/starter/PNG-cards-1.3/${cardNumberDealHouse1}_of_${cardSuitDealHouse1}.png`;
+  card4.src = `backOfCard.png`;
+  card5.src = `${cardNumberDealHouse1}_of_${cardSuitDealHouse1}.png`;
 
   if (cardNumberDealPlayer0 >= 10) {
     playerScore += 10;
@@ -185,7 +185,7 @@ btnHit.addEventListener('click', function () {
   //select card
   const cardNumber = Math.trunc(Math.random() * 13) + 1;
   const cardSuit = suits[Math.trunc(Math.random() * 4)];
-  centerCard.src = `/starter/PNG-cards-1.3/${cardNumber}_of_${cardSuit}.png`;
+  centerCard.src = `${cardNumber}_of_${cardSuit}.png`;
 
   //add score -- face cards are 10, Aces are 1 or 11 -- whichever is best
   if (cardNumber >= 10) {
@@ -201,15 +201,15 @@ btnHit.addEventListener('click', function () {
 
   switch (playerHitCount) {
     case 0:
-      card2.src = `/starter/PNG-cards-1.3/${cardNumber}_of_${cardSuit}.png`;
+      card2.src = `${cardNumber}_of_${cardSuit}.png`;
       card2.classList.remove('hidden');
       break;
     case 1:
-      card3.src = `/starter/PNG-cards-1.3/${cardNumber}_of_${cardSuit}.png`;
+      card3.src = `${cardNumber}_of_${cardSuit}.png`;
       card3.classList.remove('hidden');
       break;
     case 2:
-      cardExtra0.src = `/starter/PNG-cards-1.3/${cardNumber}_of_${cardSuit}.png`;
+      cardExtra0.src = `${cardNumber}_of_${cardSuit}.png`;
       cardExtra0.classList.remove('hidden');
   }
 
@@ -234,7 +234,7 @@ btnStay.addEventListener('click', function () {
   btnStay.classList.add('hidden');
   btnHit.classList.add('hidden');
 
-  card4.src = `/starter/PNG-cards-1.3/${cardNumberDealHouse0}_of_${cardSuitDealHouse0}.png`;
+  card4.src = `${cardNumberDealHouse0}_of_${cardSuitDealHouse0}.png`;
   houseScore += cardNumberDealHouse0;
   score1.textContent = houseScore;
 
@@ -247,7 +247,7 @@ btnStay.addEventListener('click', function () {
   } else {
     const cardNumberDealHouse2 = Math.trunc(Math.random() * 13) + 1; //Really should be done with a loop, but it's 3am
     const cardSuitDealHouse2 = suits[Math.trunc(Math.random() * 4)];
-    card6.src = `/starter/PNG-cards-1.3/${cardNumberDealHouse2}_of_${cardSuitDealHouse2}.png`;
+    card6.src = `${cardNumberDealHouse2}_of_${cardSuitDealHouse2}.png`;
     card6.classList.remove("hidden");
     if (cardNumberDealHouse2 >= 10) {
       houseScore += 10;
@@ -266,7 +266,7 @@ btnStay.addEventListener('click', function () {
     } else {
       const cardNumberDealHouse3 = Math.trunc(Math.random() * 13) + 1;
       const cardSuitDealHouse3 = suits[Math.trunc(Math.random() * 4)];
-      card7.src = `/starter/PNG-cards-1.3/${cardNumberDealHouse3}_of_${cardSuitDealHouse3}.png`;
+      card7.src = `${cardNumberDealHouse3}_of_${cardSuitDealHouse3}.png`;
       card7.classList.remove('hidden');
       if (cardNumberDealHouse3 >= 10) {
         houseScore += 10;
@@ -283,7 +283,7 @@ btnStay.addEventListener('click', function () {
       } else {
         const cardNumberDealHouse4 = Math.trunc(Math.random() * 13) + 1;
         const cardSuitDealHouse4 = suits[Math.trunc(Math.random() * 4)];
-        cardExtra1.src = `/starter/PNG-cards-1.3/${cardNumberDealHouse4}_of_${cardSuitDealHouse4}.png`;
+        cardExtra1.src = `${cardNumberDealHouse4}_of_${cardSuitDealHouse4}.png`;
         cardExtra1.classList.remove('hidden');
         if (cardNumberDealHouse4 >= 10) {
           houseScore += 10;
